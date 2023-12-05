@@ -1,0 +1,95 @@
+{
+  "model": "main.Car",
+  "data": [
+    {
+      "name": "Toyota Camry",
+      "image": "https://cdn.24.co.za/files/Cms/General/d/8685/adb8b7f19c5f48849588c8742b31bdbd.jpg",
+      "color": "White",
+      "brand": "Toyota",
+      "type": "diesel",
+      "gear": "manual",
+      "price": 16
+    },
+    {
+      "name": "Ferrari 348 tb/ts/spider",
+      "image": "https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/oadnku2dvsflzevdmmqg",
+      "color": "Red",
+      "brand": "Toyota",
+      "type": "diesel",
+      "gear": "manual",
+      "price": 100
+    },
+    {
+      "name": "Toyota venza",
+      "image": "https://www.cnet.com/a/img/resize/534f55fd3c72334ef42d1782b36a3b33ef0355d7/hub/2020/05/14/2d9f7911-1975-4f4c-b37e-07028cff9afe/ogi2-2021-toyota-venza-001.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "color": "Black",
+      "brand": "Toyota",
+      "type": "diesel",
+      "gear": "manual",
+      "price": 13
+    },
+    {
+      "name": "Honda City",
+      "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/134287/city-exterior-right-front-three-quarter-76.jpeg?isig=0&q=80",
+      "color": "Red",
+      "brand": "Honda",
+      "type": "petrol",
+      "gear": "automatic",
+      "price": 20
+    },
+    {
+      "name": "Hundai Verna",
+      "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/121943/verna-exterior-right-front-three-quarter-101.jpeg?isig=0&q=80",
+      "color": "Gray",
+      "brand": "Hundai",
+      "type": "diesel",
+      "gear": "automatic",
+      "price": 17
+    },
+    {
+      "name": "Maruti Swift",
+      "image": "https://www.financialexpress.com/wp-content/uploads/2023/10/Maruti-Swift-front.jpg",
+      "color": "Blue",
+      "brand": "Maruti",
+      "type": "petrol",
+      "gear": "manual",
+      "price": 10
+    },
+    {
+      "name": "Hyundai Venue",
+      "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201905/Hyundai_Venue_Exterior.jpeg?size=690:388",
+      "color": "Blue",
+      "brand": "Hyundai",
+      "type": "diesel",
+      "gear": "manual",
+      "price": 15
+    },
+    {
+      "name": "Tata Nexon",
+      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Tata/Nexon/11104/1697698470038/front-left-side-47.jpg",
+      "color": "Purple",
+      "brand": "Tata",
+      "type": "petrol",
+      "gear": "automatic",
+      "price": 12
+    },
+    {
+      "name": "Tata Harrier",
+      "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/139139/harrier-facelift-exterior-right-front-three-quarter-5.jpeg?isig=0&q=80",
+      "color": "Yellow",
+      "brand": "Tata",
+      "type": "diesel",
+      "gear": "manual",
+      "price": 30
+    },
+    {
+      "name": "Toyota Fortuner",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjCjs_kyUg8d-yFEned1RpDdPzPKop4LcbcQ&usqp=CAU",
+      "color": "White",
+      "brand": "Toyota",
+      "type": "petrol",
+      "gear": "automatic",
+      "price": 40
+    }
+  ]
+}
