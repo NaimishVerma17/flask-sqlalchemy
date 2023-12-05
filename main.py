@@ -17,30 +17,29 @@ def create_task():
         car_id = request.json['car_id']
         car = Car.query.get(car_id)
         if car.stock == 0:
-            return {"success": False, "message": "Out of stock."}
+            return {"success": False, "message": "Out of stock."}, 400
         order = Order(name, email, phone_number, from_date, to_date, car_id)
         car.stock = car.stock - 1
         db.session.add(order)
         db.session.commit()
 
-        return {"success": True}
+        return {"success": True}, 201
     except Exception as ex:
-        print(ex)
-        return {"success": False}
+        return {"success": False, "message": "Unable to create order. Something went wrong!"}, 500
 
 
 @app.route('/cars', methods=['GET'])
 def get_cars():
     cars = Car.query.all()
     result = cars_schema.dump(cars)
-    return jsonify(result)
+    return jsonify(result), 200
 
 
 @app.route('/orders', methods=['GET'])
 def get_orders():
     orders = Order.query.all()
     result = orders_schema.dump(orders)
-    return jsonify(result)
+    return jsonify(result), 200
 
 
 @app.route('/', methods=['GET'])
