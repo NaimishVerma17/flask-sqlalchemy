@@ -7,7 +7,7 @@ with app.app_context():
 
 
 @app.route('/orders', methods=['Post'])
-def create_task():
+def create_order():
     try:
         name = request.json['name']
         email = request.json['email']
