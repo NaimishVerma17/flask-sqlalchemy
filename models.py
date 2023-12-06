@@ -40,7 +40,7 @@ class Car(db.Model):
 class Order(db.Model):
     __tablename__ = "orders"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(255), unique=True)
+    name = db.Column(db.String(255))
     email = db.Column(db.String(255))
     phone_number = db.Column(db.String(255))
     from_date = db.Column(db.DateTime())
@@ -62,7 +62,7 @@ class CarSchema(ma.Schema):
     gear = EnumField(GearEnum, by_value=True)
 
     class Meta:
-        fields = ('id', 'name', 'color', 'image', 'brand', 'price', 'gear', 'type')
+        fields = ('id', 'name', 'color', 'image', 'brand', 'price', 'gear', 'type', 'stock')
 
 
 class OrderSchema(ma.Schema):

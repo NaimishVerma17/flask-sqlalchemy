@@ -25,6 +25,7 @@ def create_order():
 
         return {"success": True}, 201
     except Exception as ex:
+        print(ex)
         return {"success": False, "message": "Unable to create order. Something went wrong!"}, 500
 
 
