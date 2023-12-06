@@ -43,6 +43,13 @@ def get_orders():
     return jsonify(result), 200
 
 
+@app.route('/cars/<id>/orders', methods=['GET'])
+def get_car_orders(id):
+    orders = Order.query.filter_by(car_id=id)
+    result = orders_schema.dump(orders)
+    return jsonify(result), 200
+
+
 @app.route('/', methods=['GET'])
 def index():
     return jsonify({'message': 'Welcome to car rental API'})
