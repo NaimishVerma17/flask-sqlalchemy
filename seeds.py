@@ -1,4 +1,4 @@
-from main import db, app
+from app import db, app
 from sqlalchemyseed import load_entities_from_json
 from sqlalchemyseed import Seeder
 
