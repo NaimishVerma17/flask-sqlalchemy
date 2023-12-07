@@ -6,6 +6,9 @@ with app.app_context():
     db.create_all()
 
 
+# METHOD: POST
+# PATH: /orders
+# ROLE: Create the order to rent a car
 @app.route('/orders', methods=['Post'])
 def create_order():
     try:
@@ -29,6 +32,9 @@ def create_order():
         return {"success": False, "message": "Unable to create order. Something went wrong!"}, 500
 
 
+# METHOD: GET
+# PATH: /cars
+# ROLE: Fetch the list of all the cars
 @app.route('/cars', methods=['GET'])
 def get_cars():
     cars = Car.query.all()
@@ -36,6 +42,9 @@ def get_cars():
     return jsonify(result), 200
 
 
+# METHOD: GET
+# PATH: /orders
+# ROLE: Fetch the list of all the orders
 @app.route('/orders', methods=['GET'])
 def get_orders():
     orders = Order.query.all()
@@ -43,6 +52,9 @@ def get_orders():
     return jsonify(result), 200
 
 
+# METHOD: GET
+# PATH: /cars/:id/orders
+# ROLE: Fetch the list of all the orders for a given car
 @app.route('/cars/<id>/orders', methods=['GET'])
 def get_car_orders(id):
     orders = Order.query.filter_by(car_id=id)

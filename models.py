@@ -5,16 +5,20 @@ from config import db, ma
 from marshmallow import fields
 
 
+# Enum to store the gear type.
+# Enum ensures that the database columns can only contain one of the specified values
 class GearEnum(enum.Enum):
     manual = 'manual'
     automatic = 'automatic'
 
 
+# Enum to store the engine type.
 class TypeEnum(enum.Enum):
     diesel = 'diesel'
     petrol = 'petrol'
 
 
+# Database model for cars table
 class Car(db.Model):
     __tablename__ = "cars"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -37,6 +41,7 @@ class Car(db.Model):
         self.price = price
 
 
+# Database model for orders table
 class Order(db.Model):
     __tablename__ = "orders"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -57,6 +62,7 @@ class Order(db.Model):
         self.car_id = car_id
 
 
+# Marshmallow schema for car object
 class CarSchema(ma.Schema):
     type = EnumField(TypeEnum, by_value=True)
     gear = EnumField(GearEnum, by_value=True)
@@ -65,6 +71,7 @@ class CarSchema(ma.Schema):
         fields = ('id', 'name', 'color', 'image', 'brand', 'price', 'gear', 'type', 'stock')
 
 
+# Marshmallow schema for order object
 class OrderSchema(ma.Schema):
     car = fields.Nested(CarSchema)
 
@@ -72,6 +79,7 @@ class OrderSchema(ma.Schema):
         fields = ('id', 'name', 'email', 'phone_number', 'from_date', 'to_date', 'car')
 
 
+# Instantiating the schema for single and list of object(by passing a param "many=True")
 car_schema = CarSchema()
 cars_schema = CarSchema(many=True)
 order_schema = OrderSchema()
