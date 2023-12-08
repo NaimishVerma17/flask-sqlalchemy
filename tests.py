@@ -19,7 +19,7 @@ class APITestCase(TestCase):
         db.session.remove()
         db.drop_all()
 
-    def test_get_cars(self):
+    def test_get_car(self):
         # Create some test data
         car1 = Car(name='Toyota', color='Camry', type='petrol', gear='manual', price=300, brand='Toyota', image="")
         car2 = Car(name='Honda', color='Blue', type='diesel', gear='automatic', price=500, brand='Toyota', image="")
@@ -43,4 +43,3 @@ class APITestCase(TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    app.run()
