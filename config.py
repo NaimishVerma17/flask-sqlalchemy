@@ -12,10 +12,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Fetch db config from environment variables
-MYSQL_HOST = os.environ.get('AZURE_MYSQL_HOST')
-MYSQL_NAME = os.environ.get('AZURE_MYSQL_NAME')
-MYSQL_USER = os.environ.get('AZURE_MYSQL_USER')
-MYSQL_PASSWORD = os.environ.get('AZURE_MYSQL_PASSWORD')
+MYSQL_HOST = os.environ.get('AZURE_MYSQL_HOST') or 'localhost'
+MYSQL_NAME = os.environ.get('AZURE_MYSQL_NAME') or 'car_rentals'
+MYSQL_USER = os.environ.get('AZURE_MYSQL_USER') or 'root'
+MYSQL_PASSWORD = os.environ.get('AZURE_MYSQL_PASSWORD') or 'password'
 
 # Assign database configuration to the flask app
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://%s:%s@%s/%s" % (
